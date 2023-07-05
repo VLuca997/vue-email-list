@@ -1,39 +1,8 @@
-/*
-
-        HEADER
-
-*/
-
-
-
-
-
-
-
-/*
-
-        MAIN
-
-*/
-
-
-
-
-
-
-
-
-/*
-
-        FOOTER
-
-*/
-
-
-
-
-/*
-
-        DEBUG
-
-*/
+.text-red{
+        color: red;
+}
+.text-red:hover{
+        color: white;
+        background-color: blueviolet;
+        border: darkblue;
+}
