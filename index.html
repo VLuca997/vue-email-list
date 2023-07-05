@@ -29,13 +29,11 @@
     <main>
         <div id="app" class="text-center bg-dark  mx-auto w-25 rounded-3 m-5">
             <h1 class="text-light fw-bold mb-4 ">EMAIL-GENERATOR 4 FREE NETFLIX ACCOUNT</h1>
-            <button type="button" class="btn btn-warning mb-4 text-red">Genera Email</button>
+            <button type="button" class="btn btn-warning mb-4 text-red" @click="generateEmails" v-if="!emails.length"> Genera Email</button>
             <div>
-                <p class="text-light"> CARICAMENTO IN CORSO: ATTENDERE.</p>
-                <ul class="text-light list-group list-group-flush ">
-                    <li class="list-group-item">
-                        aoo
-                    </li>
+                <p class="text-light" v-if="loading"> CARICAMENTO IN CORSO: ATTENDERE.</p>
+                <ul class="text-light list-group list-group-flush " v-if="emails.length">
+                    <li class="list-group-item"v-for="(email, index) in emails" :key="index">{{ email }}</li>
                 </ul>
             </div>
         </div>
